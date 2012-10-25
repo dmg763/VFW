@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+    <!-- Denise M. Gilbert
+    VFW Term 1211
+    Project 1
+    October 25, 2012
+    Add Item HTML Page -->
+
+<html>
+
+    <head>
+	<meta charset="utf-8" />
+	<meta name="description" content="Keep track of all your gifting needs in one easy-to-use application." />
+	<meta name="keywords" content="Gifts, Gifting, Mobile, Presents" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="viewport" content="user-scalable=no, width=device-width" />
+	<title>The Perfect Gift</title>
+    </head>
+    
+    <body>
+	<header><h1>The Perfect Gift</h1></header>
+	<form action="#" method="post">
+	    <fieldset>
+		<legend>Recipient</legend>
+		    <ul>
+			<li><label for="fname">First Name:</label><input type="text" id="fname" /></li>
+			<li><label for="lname">Last Name:</label><input type="text" id="lname" /></li>
+			<li><label for="bday">Birthday:</label><input type="date" id="bday" /></li>
+		    </ul>
+	    </fieldset>
+	    <fieldset>
+		<legend>Size Info</legend>
+		<ul>
+			<li><label for="topsize">Shirts/Blouses:</label><input type="text" id="topsize" /></li>
+			<li><label for="bottomsize">Pants:</label><input type="text" id="bottomsize" /></li>
+			<li><label for="shoesize">Shoes:</label><input type="text" id="shoesize" /></li>
+			<li><label for="shoesize">Ring Size:</label>
+			    <select id="ringsize">
+				<optgroup label="Women">
+				  <option value="5">5</option>
+				  <option value="6">6</option>
+				  <option value="7">7</option>
+				</optgroup>
+				<optgroup label="Men">
+				  <option value="10">10</option>
+				  <option value="11">11</option>
+				</optgroup>
+			      </select></li>
+		</ul>
+	    </fieldset>
+	    <fieldset>
+		<legend>Favorites</legend>
+		<ul>
+		    <li><label for="favcolor">Color:</label><input type="text" list="colors" id="favcolor" name="favcolor">
+			    <datalist id="colors">
+				<option value="Blue">
+				<option value="Green">
+				<option value="Pink">
+				<option value="Purple">
+				<option value="Black">
+				<option value="Brown">
+				<option value="Red">
+			    </datalist></li>
+		    <li><label for="flowers">Flowers:</label><input type="text" id="flowers" /></li>
+		    <li><label for="foods">Foods:</label><input type="text" id="foods" /></li>
+		    <li><label for="restaurants">Restaurants:</label>
+			    </br>
+			    <textarea rows="2" cols="50" id="restaurants"></textarea></li>
+		    </ul>
+	    </fieldset>
+	    <fieldset>
+		<legend>Wish List</legend>
+		<ul>
+		    <li><label for="purchased">Purchased:</label><label for="yes">Yes:</label><input type="radio" value="yes" id="yes" name="purchased" />
+			<label for="no">No:</label><input type="radio" checked value="no" id="no" name="purchased" /></li>
+			<li><label for="rating">Rate This Gift:</label><input type="range" min="1" max="10" name="rating" id="rating"></li>
+		    <li><label for="giftwanted">Gift Wanted:</label><input type="text" id="giftwanted" /></li>
+		    <li><label for="price">Price: &#36;</label><input type="text" id="price" /></li>
+		    <li><label for="wheretobuy">Where to Buy:</label>
+			    </br>
+			    <textarea rows="2" cols="50" id="wheretobuy"></textarea></li>
+		</ul>
+	    </fieldset>
+	    <input type="submit" value="Save Recipient" />
+	    <input type="hidden" value="RecipientID" />
+	</form>
+	
+
+
+    <a href="#">Clear Stored Data</a> <a href="#">Display Data</a>
+    </body>
+</html>
