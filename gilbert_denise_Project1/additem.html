@@ -17,8 +17,19 @@
     </head>
     
     <body>
-	<header><h1>The Perfect Gift</h1></header>
+	
+	<!-- HEADER -->
+	
+	<header>
+	    <h1>The Perfect Gift</h1>
+	</header>
+	
+	<!-- FORM STARTS HERE -->
+	
 	<form action="#" method="post">
+	    
+	    <!-- Recipient Info -->
+	    
 	    <fieldset>
 		<legend>Recipient</legend>
 		    <ul>
@@ -27,6 +38,9 @@
 			<li><label for="bday">Birthday:</label><input type="date" id="bday" /></li>
 		    </ul>
 	    </fieldset>
+	    
+	    <!-- Size Info -->
+	    
 	    <fieldset>
 		<legend>Size Info</legend>
 		<ul>
@@ -47,6 +61,9 @@
 			      </select></li>
 		</ul>
 	    </fieldset>
+	    
+	    <!-- Favorites Info -->
+	    
 	    <fieldset>
 		<legend>Favorites</legend>
 		<ul>
@@ -62,30 +79,36 @@
 			    </datalist></li>
 		    <li><label for="flowers">Flowers:</label><input type="text" id="flowers" /></li>
 		    <li><label for="foods">Foods:</label><input type="text" id="foods" /></li>
-		    <li><label for="restaurants">Restaurants:</label>
-			    </br>
+		    <li><label for="restaurants">Restaurants:</label><br>
 			    <textarea rows="2" cols="50" id="restaurants"></textarea></li>
 		    </ul>
 	    </fieldset>
+	    
+	    <!-- Wish List Info -->
+	    
 	    <fieldset>
 		<legend>Wish List</legend>
 		<ul>
-		    <li><label for="purchased">Purchased:</label><label for="yes">Yes:</label><input type="radio" value="yes" id="yes" name="purchased" />
+		    <li><label for="yes">Purchased:  Yes:</label><input type="radio" value="yes" id="yes" name="purchased" />
 			<label for="no">No:</label><input type="radio" checked value="no" id="no" name="purchased" /></li>
 			<li><label for="rating">Rate This Gift:</label><input type="range" min="1" max="10" name="rating" id="rating"></li>
 		    <li><label for="giftwanted">Gift Wanted:</label><input type="text" id="giftwanted" /></li>
 		    <li><label for="price">Price: &#36;</label><input type="text" id="price" /></li>
-		    <li><label for="wheretobuy">Where to Buy:</label>
-			    </br>
+		    <li><label for="wheretobuy">Where to Buy:</label><br>
 			    <textarea rows="2" cols="50" id="wheretobuy"></textarea></li>
 		</ul>
-	    </fieldset>
+	    </fieldset><br>
+	    
+	    <!-- Submit Button and Hidden Field -->
+	    
 	    <input type="submit" value="Save Recipient" />
 	    <input type="hidden" value="RecipientID" />
-	</form>
+	</form><br>
+
+	<!-- FOOTER -->
 	
-
-
-    <a href="#">Clear Stored Data</a> <a href="#">Display Data</a>
+	<footer>
+	    <a href="#">Clear Stored Data</a> <a href="#">Display Data</a>
+	</footer>
     </body>
 </html>
