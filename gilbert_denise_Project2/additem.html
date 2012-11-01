@@ -1,8 +1,8 @@
 <!DOCTYPE html>
     <!-- Denise M. Gilbert
     VFW Term 1211
-    Project 1
-    October 25, 2012
+    Project 2
+    November 1, 2012
     Add Item HTML Page -->
 
 <html>
@@ -13,7 +13,10 @@
 	<meta name="keywords" content="Gifts, Gifting, Mobile, Presents" />
 	<meta name="robots" content="noindex, nofollow" />
 	<meta name="viewport" content="user-scalable=no, width=device-width" />
+	
 	<title>The Perfect Gift</title>
+	
+	<link href="css/styles.css" rel="stylesheet" />
     </head>
     
     <body>
@@ -26,12 +29,12 @@
 	
 	<!-- FORM STARTS HERE -->
 	
-	<form action="#" method="post">
+	<form action="#" method="post" id="form">
 	    
 	    <!-- Recipient Info -->
 	    
 	    <fieldset>
-		<legend>Recipient</legend>
+		<legend>&#8212 Recipient &#8212</legend>
 		    <ul>
 			<li><label for="fname">First Name:</label><input type="text" id="fname" /></li>
 			<li><label for="lname">Last Name:</label><input type="text" id="lname" /></li>
@@ -42,7 +45,7 @@
 	    <!-- Size Info -->
 	    
 	    <fieldset>
-		<legend>Size Info</legend>
+		<legend>&#8212 Size Info &#8212</legend>
 		<ul>
 			<li><label for="topsize">Shirts/Blouses:</label><input type="text" id="topsize" /></li>
 			<li><label for="bottomsize">Pants:</label><input type="text" id="bottomsize" /></li>
@@ -65,29 +68,20 @@
 	    <!-- Favorites Info -->
 	    
 	    <fieldset>
-		<legend>Favorites</legend>
-		<ul>
-		    <li><label for="favcolor">Color:</label><input type="text" list="colors" id="favcolor" name="favcolor">
-			    <datalist id="colors">
-				<option value="Blue">
-				<option value="Green">
-				<option value="Pink">
-				<option value="Purple">
-				<option value="Black">
-				<option value="Brown">
-				<option value="Red">
-			    </datalist></li>
-		    <li><label for="flowers">Flowers:</label><input type="text" id="flowers" /></li>
-		    <li><label for="foods">Foods:</label><input type="text" id="foods" /></li>
-		    <li><label for="restaurants">Restaurants:</label><br>
-			    <textarea rows="2" cols="50" id="restaurants"></textarea></li>
+		<legend>&#8212 Favorites &#8212</legend>
+		<ul id="favorites">
+		    <li id="select"><label for="favcolor">Color(s):</label></li>
+		    <li><label for="flowers">Flower(s):</label><input type="text" id="flowers" /></li>
+		    <li><label for="foods">Food(s):</label><input type="text" id="foods" /></li>
+		    <li><label for="restaurants">Restaurant(s):</label><br>
+			    <textarea rows="auto" cols="auto" id="restaurants"></textarea></li>
 		</ul>
 	    </fieldset>
 	    
 	    <!-- Wish List Info -->
 	    
 	    <fieldset>
-		<legend>Wish List</legend>
+		<legend>&#8212 Wish List &#8212</legend>
 		<ul>
 		    <li><label for="yes">Purchased:  Yes:</label><input type="radio" value="yes" id="yes" name="purchased" />
 			<label for="no">No:</label><input type="radio" checked value="no" id="no" name="purchased" /></li>
@@ -95,20 +89,21 @@
 		    <li><label for="giftwanted">Gift Wanted:</label><input type="text" id="giftwanted" /></li>
 		    <li><label for="price">Price: &#36;</label><input type="text" id="price" /></li>
 		    <li><label for="wheretobuy">Where to Buy:</label><br>
-			    <textarea rows="2" cols="50" id="wheretobuy"></textarea></li>
+			    <textarea rows="auto" cols="auto" id="wheretobuy"></textarea></li>
 		</ul>
 	    </fieldset><br>
 	    
 	    <!-- Submit Button and Hidden Field -->
 	    
-	    <input type="submit" value="Save Recipient" />
+	    <input type="button" value="Save Recipient" id="saveRecipient" />
 	    <input type="hidden" value="RecipientID" />
 	</form><br>
 
 	<!-- FOOTER -->
 	
 	<footer>
-	    <a href="#">Clear Stored Data</a> <a href="#">Display Data</a>
+	    <a href="#" id="clearStoredData">Clear Stored Data</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" id="displayData">Display Data</a>
 	</footer>
+	<script src="js/main.js" type="text/javascript"></script>
     </body>
 </html>

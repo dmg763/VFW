@@ -1,0 +1,102 @@
+/* Denise M. Gilbert
+VFW Term 1211
+Project 2
+November 1, 2012
+styles.css Page*/
+
+header {
+    background-color: #662071;
+    border: 4px groove #C0C0C0;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+h1 {
+    background-color: #882A97;
+    color: #EF93FD;
+    font-size: 20pt;
+    font-variant: small-caps;
+    font-weight: bold;
+    letter-spacing: .15em;
+    padding: 4px;
+    text-align: center;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    color: #3A1240;
+    font-size: 20pt;
+}
+
+p {
+    color: #EF93FD;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+fieldset {
+    background-color: #E8E8E8;
+    border: 2px ridge #C0C0C0;
+}
+
+legend {
+    background-color: #882A97;
+    border-color: #662071;
+    border-radius: 5px;
+    color: #C0C0C0;
+    font-size: 14pt;
+    font-variant: small-caps;
+    font-weight: bold;
+    letter-spacing: .02em;
+    padding: 1px;
+    text-align: center;
+    width: 260px;
+}
+
+label {
+    font-size: 12pt;
+    margin-right: 4px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 2px;
+    margin: 2px;
+}
+
+body {
+
+    background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.04, #662071),
+	color-stop(0.52, #882A97),
+	color-stop(0.76, #9F31B0)
+);
+}
+
+a {
+    color: #C0C0C0;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+textarea {
+    height: 20px;
+    width: 260px;
+}
+
+#headerImage {
+    margin-top: 4px;
+}
+
+#saveRecipient {
+    background-color: #000;
+    border: 3px outset #C0C0C0;
+    border-radius: 15px;
+    font-size: 10pt;
+    font-variant: small-caps;
+    font-weight: bold;
+    color: #C0C0C0;
+}
