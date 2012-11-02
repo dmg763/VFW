@@ -23,22 +23,22 @@ window.addEventListener("DOMContentLoaded", function () {
 
 // Create Select Color Element and Populate with Different Color Options
 
-    function makeCats() {
+    function createColorOptions() {
 	    var formTag = document.getElementsByTagName("form"),
 		    selectLi = $("select"),
 		    makeSelect = document.createElement("select");
 		makeSelect.setAttribute("id", "groups");
 	    for (var i = 0, j = selectColor.length; i < j; i += 1) {
 		    var makeOption = document.createElement("option"),
-		    optText = selectColor[i];
-		    makeOption.setAttribute("value", optText);
-		    makeOption.innerHTML = optText;
+		    optionText = selectColor[i];
+		    makeOption.setAttribute("value", optionText);
+		    makeOption.innerHTML = optionText;
 		    makeSelect.appendChild(makeOption);
 	    }
 	    selectLi.appendChild(makeSelect);
     }
 
-    makeCats();
+    createColorOptions();
     
     // Find Values of Selected Radio Buttons
     
@@ -52,6 +52,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
     
     // Find Values of Selected Check Boxes
+    // Not Using This Function - Saving Code for Future Reference
     
     /*function getCheckboxValues() {
 	    if ($("whatever").checked) {
@@ -60,6 +61,28 @@ window.addEventListener("DOMContentLoaded", function () {
 		    whateverValue = "None";
 	    }
     }*/
+    
+    // Toggle Control Function
+    
+    function toggleControls(n) {
+	    switch (n) {
+	    case "on":
+		    $("form").style.display = "none";
+		    $("clearData").style.display = "inline";
+		    $("displayData").style.display = "none";
+		    $("addRecipient").style.display = "inline";
+		    break;
+	    case "off":
+		    $("form").style.display = "block";
+		    $("clearData").style.display = "inline";
+		    $("displayData").style.display = "inline";
+		    $("addRecipient").style.display = "none";
+		    $("items").style.display = "none";
+		    break;
+	    default:
+		    return false;
+	    }
+    }
     
     // Save Recipient to Local Storage Function
     
@@ -87,8 +110,8 @@ window.addEventListener("DOMContentLoaded", function () {
 	    item.giftwanted = ["Gift Wanted:", $("giftwanted").value];
 	    item.price = ["Price:", $("price").value];
 	    item.wheretobuy = ["Where to Buy:", $("wheretobuy").value];
-	// Save Data Into Local Storage
-	// Use Stringify to Convert the Item Object to a String
+	    // Save Data Into Local Storage
+	    // Use Stringify to Convert the Item Object to a String
 	    localStorage.setItem(id, JSON.stringify(item));
 	    alert("Recipient Information is Saved!");
     }
@@ -97,11 +120,16 @@ window.addEventListener("DOMContentLoaded", function () {
     // Write Data from Local Storage to the Browser
     
     function displayLocalStorageData() {
+	    toggleControls("on");
+	    if (localStorage.length === 0) {
+		    alert("There is no data in local storage to display.");
+	    }
 	    var makeDiv = document.createElement("div");
 	    makeDiv.setAttribute("id", "items");
 	    var makeList = document.createElement("ul");
 	    makeDiv.appendChild(makeList);
 	    document.body.appendChild(makeDiv);
+	    $("items").style.display = "block";
 	    for (var i = 0, j = localStorage.length; i < j; i += 1) {
 		    var makeLi = document.createElement("li");
 		    makeList.appendChild(makeLi);
@@ -120,25 +148,26 @@ window.addEventListener("DOMContentLoaded", function () {
 	    }
     }
     
+    // Function to Clear Local Storage Data
+    
+    function clearLocalStorageData() {
+	    if (localStorage.length === 0) {
+		    alert("There is no data in local storage to delete.");
+	    } else {
+		    localStorage.clear();
+		    alert("All local storage data has been deleted.");
+		    window.location.reload();
+		    return false;
+	    }
+    }
+    
 // Set Links and Submit Click Events
 
     var displayDataLink = $("displayData");
     displayDataLink.addEventListener("click", displayLocalStorageData);
     var addRecipient = $("saveRecipient");
     addRecipient.addEventListener("click", saveRecipientToLocalStorage);
-        //var clearStoredData = $("clearStoredData");
-    //clearStoredData.addEventListener("click", clearLocalStorageData);
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    var clearData = $("clearData");
+    clearData.addEventListener("click", clearLocalStorageData);
     
 });
