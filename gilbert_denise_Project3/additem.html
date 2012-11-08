@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+    <!-- Denise M. Gilbert
+    VFW Term 1211
+    Project 3
+    November 8, 2012
+    Add Item HTML Page -->
+
+<html>
+
+    <head>
+	<meta charset="utf-8" />
+	<meta name="description" content="Keep track of all your gifting needs in one easy-to-use application." />
+	<meta name="keywords" content="Gifts, Gifting, Mobile, Presents" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="viewport" content="user-scalable=no, width=device-width" />
+	
+	<title>The Perfect Gift</title>
+	
+	<link href="css/styles.css" rel="stylesheet" />
+    </head>
+    
+    <body>
+	<a name="top"></a>
+	<!-- HEADER -->
+	
+	<header>
+	    <h1><a href=index.html id="homePage">The Perfect Gift</a></h1>
+	</header>
+	
+	<nav>
+	    <a href="#" id="clearData">Clear Stored Data</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	    <a href="#" id="displayData">Display Data</a>
+	    <a href="addItem.html" id="addRecipient" style="display: none">Add Recipient</a>
+	</nav>
+	
+	    <!-- FORM STARTS HERE -->
+	    
+	    <form action="#" method="post" id="form">
+	    
+		<!-- Recipient Info -->
+	    
+		<fieldset>
+		    <legend>&#8212 Recipient &#8212</legend>
+		    <span id="requiredNote">* fields are required</span>
+		    <ul id="errors"></ul>
+			<ul>
+			    <li><label for="fname">*First Name:</label><br>
+				<input type="text" id="fname" /></li>
+			    <li><label for="lname">*Last Name:</label><br>
+				<input type="text" id="lname" /></li>
+			    <li><label for="bday">Birthday:</label><br>
+				<input type="date" id="bday" /></li>
+			    <li><label for="sunSign">Zodiac Sign:</label><br>
+				<p id="sunSign"></p></li>
+			</ul>
+		</fieldset>
+	    
+		<!-- Size Info -->
+	    
+		<fieldset>
+		    <legend>&#8212 Size Info &#8212</legend>
+			<ul>
+			    <li><label for="topsize">Tops/Shirts/Blouses:</label><br>
+				<input type="text" id="topsize" /></li>
+			    <li><label for="bottomsize">Bottoms/Pants/Skirts:</label><br>
+				<input type="text" id="bottomsize" /></li>
+			    <li><label for="shoesize">Footwear:</label><br>
+				<input type="text" id="shoesize" /></li>
+			    <li><label for="shoesize">Rings:</label>
+				<select id="ringsize">
+				    <optgroup label="Women">
+				      <option value="5">5</option>
+				      <option value="6">6</option>
+				      <option value="7">7</option>
+				    </optgroup>
+				    <optgroup label="Men">
+				      <option value="10">10</option>
+				      <option value="11">11</option>
+				    </optgroup>
+				</select>
+			    <label for="piercedEars">&nbsp;&nbsp;&nbsp;&nbsp;Pierced Ears:</label>
+				<input type="checkbox" id="piercedEars" /></li>
+			</ul>
+		</fieldset>
+	    
+		<!-- Favorites Info -->
+	    
+		<fieldset>
+		    <legend>&#8212 Favorites &#8212</legend>
+			<ul id="favorites">
+			    <li id="select"><label for="favcolor">Color(s):</label><br></li>
+			    <li><label for="flowers">Flower(s):</label><input type="text" id="flowers" /></li>
+			    <li><label for="foods">Food(s):</label><input type="text" id="foods" /></li>
+			    <li><label for="restaurants">Restaurant(s):</label><br>
+				<textarea rows="auto" cols="auto" id="restaurants"></textarea>
+			    </li>
+			</ul>
+		</fieldset>
+	    
+		<!-- Wish List Info -->
+	    
+		<fieldset>
+		    <legend>&#8212 Wish List &#8212</legend>
+			<ul>
+			    <li><label for="giftRating">Rate This Gift:</label><br>
+				    0&nbsp;<input type="range" min="1" max="10" name="giftRating" id="giftRating">&nbsp;10</li>
+			    <li><label for="giftwanted">Gift Wanted:</label>
+				    <input type="text" id="giftwanted" /></li>
+			    <li><label for="price">Price: &#36;</label>
+				    <input type="number"  id="price" /></li>
+			    <li><label for="wheretobuy">Where to Buy:</label><br>
+				    <textarea rows="auto" cols="auto" id="wheretobuy"></textarea></li>
+			    <label>Purchased:</label>
+			    <li><label for="yes">Yes:</label>
+				    <input type="radio" value="yes" id="yes" name="purchased" class="purchased" />
+				<label for="no">&nbsp;No:</label>
+				    <input type="radio" checked value="no" id="no" name="purchased" class="purchased" /></li>
+			</ul>
+		</fieldset>
+		
+		<!-- Top of Page Link -->
+		
+		<h4><a href="#top">TOP OF PAGE</a><br></h4>
+	    
+		    <!-- Submit Button and Hidden Field -->
+			<footer>
+			    <input type="submit" value="Save Recipient" id="saveRecipient" />
+			    <input type="hidden" value="RecipientID" />
+			</footer>
+	    </form>
+	    
+	<script src="js/main.js" type="text/javascript"></script>
+    </body>
+</html>
